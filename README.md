@@ -4,6 +4,15 @@ cas文档：http://jasig.github.io/cas/4.0.x/index.html
 cas构建基础：https://github.com/lansheng228/cas-overlay
 构建命令：mvn clean package
 将生成的war包，放到/var/lib/tomcat7/webapps/下， 重启tomcat。
+进入/var/lib/tomcat7/webapps/下，执行：
+rm ./cas/WEB-INF/lib/hibernate-commons-annotations-4.0.1.Final.jar 
+rm ./cas/WEB-INF/lib/hibernate-core-4.1.0.Final.jar 
+rm ./cas/WEB-INF/lib/hibernate-jpa-2.0-api-1.0.1.Final.jar
+rm ./management/WEB-INF/lib/hibernate-commons-annotations-4.0.1.Final.jar 
+rm ./management/WEB-INF/lib/hibernate-core-4.1.0.Final.jar 
+rm ./management/WEB-INF/lib/hibernate-jpa-2.0-api-1.0.1.Final.jar
+再次重启tomcat。
+  
 访问https://localhost:8443/management
 账户: simba 密码：simba
 
